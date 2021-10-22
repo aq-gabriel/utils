@@ -35,3 +35,14 @@ function dateAdjust (date) {
 console.log(correctDate) // acredito que até aqui é o que você precisa
 // return { br: '10/09/2021 : 12:49:19 ', us: '9/10/2021 : 12:49:19 PM' }
 console.log(data)
+
+
+// Novo jeito de resolver o que foi feito
+
+// data hipotética vinda do serviço
+var minhaDate = '2021-09-10T00:00:00.000Z'
+
+//gerenciando o formato da data
+var nova = new Date(minhaDate.replace(/-/g, '\/').replace(/T.+/, ''));
+// 2021-09-10T03:00:00.000Z
+console.log(nova)
